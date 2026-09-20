@@ -1,4 +1,4 @@
-use miditui::midi::{gm_instrument_name, MidiParser, Song};
+use midi_tui::midi::{gm_instrument_name, MidiParser, Song};
 
 #[test]
 fn test_pitch_to_name() {

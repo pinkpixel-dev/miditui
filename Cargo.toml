@@ -1,11 +1,18 @@
 [package]
-name = "miditui"
+name = "midi-tui"
 version = "0.1.0"
 edition = "2021"
 authors = ["Pink Pixel <admin@pinkpixel.dev>"]
 description = "A terminal MIDI player with multi-track piano roll visualizer and SoundFont synthesis"
 license = "Apache-2.0"
-repository = "https://github.com/pinkpixel-dev/miditui"
+readme = "README.md"
+repository = "https://github.com/pinkpixel-dev/midi-tui"
+keywords = ["midi", "tui", "ratatui", "player", "soundfont"]
+categories = ["command-line-utilities", "multimedia::audio"]
+
+[[bin]]
+name = "miditui"
+path = "src/main.rs"
 
 [dependencies]
 ratatui = "0.30.2"

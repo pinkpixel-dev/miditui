@@ -41,6 +41,14 @@ sudo dnf install alsa-lib-devel pkg-config
 sudo pacman -S alsa-lib pkgconf
 ```
 
+### Install with Cargo
+
+```bash
+cargo install midi-tui
+```
+
+After installation, run `miditui` from anywhere in your terminal.
+
 ### Build from source
 
 ```bash

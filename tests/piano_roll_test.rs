@@ -1,5 +1,5 @@
-use miditui::app::App;
-use miditui::midi::MidiParser;
+use midi_tui::app::App;
+use midi_tui::midi::MidiParser;
 
 #[test]
 fn test_viewport_duration_zoom() {
