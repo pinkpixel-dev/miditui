@@ -47,49 +47,45 @@ sudo pacman -S alsa-lib pkgconf
 cargo install midi-tui
 ```
 
-After installation, run `miditui` from anywhere in your terminal.
+## Usage
 
-### Build from source
+### Play a MIDI file
 
 ```bash
-git clone https://github.com/pinkpixel-dev/miditui.git
-cd miditui
-cargo build --release
+miditui path/to/song.mid
 ```
 
-The compiled binary will be placed at `target/release/miditui`.
+If the filename or directory path contains spaces, wrap it in quotes:
 
-## Usage
+```bash
+miditui "Alkaline Trio – Mercy Me.mid"
+```
 
 ### Run the built-in demo song
 
-```bash
-cargo run --release
-```
-
-### Play a local MIDI file
+Running without any arguments launches the built-in 4-track demo jam:
 
 ```bash
-cargo run --release -- path/to/song.mid
+miditui
 ```
 
 ### Use a custom SoundFont (.sf2)
 
 ```bash
-cargo run --release -- path/to/song.mid --sf2 /path/to/soundfont.sf2
+miditui path/to/song.mid --sf2 /path/to/soundfont.sf2
 ```
 
 You can also set the `SOUNDFONT` environment variable:
 
 ```bash
 export SOUNDFONT=/path/to/GeneralUser_GS.sf2
-cargo run --release -- path/to/song.mid
+miditui path/to/song.mid
 ```
 
 ### Inspect MIDI file details without opening the TUI
 
 ```bash
-cargo run --release -- path/to/song.mid --info
+miditui path/to/song.mid --info
 ```
 
 ## Controls
@@ -139,6 +135,19 @@ cargo run --release -- path/to/song.mid --info
 | :--- | :--- |
 | `?` | Toggle help overlay modal |
 | `Esc` / `q` | Close help modal / Quit application |
+
+## Alternative Installation
+
+### Build from source
+
+```bash
+git clone https://github.com/pinkpixel-dev/miditui.git
+cd miditui
+cargo build --release
+```
+
+The compiled binary will be placed at `target/release/miditui`.
+If you are running directly from the source repository instead of installing via Cargo, replace `miditui` with `cargo run --release --` (for example: `cargo run --release -- "song.mid"`).
 
 ## License
 
