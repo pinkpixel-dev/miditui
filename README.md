@@ -1,22 +1,16 @@
-# Miditui
+<p align="center">
+  <img src="logo.png" alt="Miditui Logo" width="600">
+</p>
 
-A terminal MIDI player and piano roll visualizer built with Rust and Ratatui.
+<p align="center">
+  <strong>A terminal MIDI player and multi-track piano roll visualizer built with Rust and Ratatui.</strong>
+</p>
+
+<p align="center">
+  <img src="screenshot.png" alt="Miditui running in the terminal" width="100%">
+</p>
 
 `miditui` renders a multi-track piano roll with truecolor track palettes, interactive scrubbing, and real-time audio playback through your default speakers using SoundFont synthesis or a built-in fallback synth.
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│   MIDITUI  Alkaline Trio - Mercy Me  4 tracks [SF2: GM]     │
-├───────────────────┬─────────────────────────────────────────┤
-│ TRACKS (4)        │ C4 █ ─── Bar 1 ───┼─── Bar 2 ───┼────── │
-│ ▶ ● Overdrive Gtr │ B3 █   ██████     │             │       │
-│     ch1  [M] [S]  │ A3 █       │      │   ██████    │       │
-│   ● Electric Bass │ ...█───────┼──────┼─────────────┼────── │
-│     ch2  [M] [S]  │            │ (playhead)                 │
-├───────────────────┴─────────────────────────────────────────┤
-│ [⏸] [⏹] 0:23.1 / 2:50.0  Bar 12.3  128 BPM ━━●─── Vol: 85%  │
-└─────────────────────────────────────────────────────────────┘
-```
 
 ## Features
 
